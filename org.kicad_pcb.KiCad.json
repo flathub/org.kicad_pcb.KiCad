@@ -83,6 +83,25 @@
             ]
         },
         {
+            "name": "ngspice",
+            "rm-configure": true,
+            "config-opts": [ "--disable-silent-rules", "--with-ngshared", "--enable-xspice", "--enable-cider", "--enable-openmp" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/28/ngspice-28.tar.gz",
+                    "sha256": "94804fa78c8db2f90f088902e8c27f7b732a66767a58c70f37612bff5a16df66"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "cp -p /usr/share/automake-*/config.{sub,guess} .",
+                        "autoconf -f -B build/autoconf_prepend-include"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "kicad",
             "sources": [
                 {
@@ -101,7 +120,7 @@
                 "-DKICAD_SCRIPTING=OFF",
                 "-DKICAD_SCRIPTING_MODULES=OFF",
                 "-DKICAD_SCRIPTING_WXPYTHON=OFF",
-                "-DKICAD_SPICE=OFF"
+                "-DKICAD_SPICE=ON"
             ]
         },
         {
