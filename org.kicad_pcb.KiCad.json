@@ -154,7 +154,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/KiCad/kicad-footprints/archive/5.0.0.tar.gz#/kicad-footprints-5.0.0.tar.gz",
-                    "sha256": "5259eca6d7b4519258a6cfd7d9e90b5eeeaa6ab6975ad0b12734f7bca1210cb6"
+                    "sha256": "26c0231043b66e75d02aa5e5c9b51a07966e3aed8c17df22c255aa379104e2a6"
                 }
             ],
             "buildsystem": "cmake"
