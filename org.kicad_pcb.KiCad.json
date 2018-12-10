@@ -107,8 +107,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://launchpad.net/kicad/5.0/5.0.0/+download/kicad-5.0.0.tar.xz",
-                    "sha256": "377582e4287146186593d42a5a7fe761590a79404982524ce445b4edbf96d89e"
+                    "url": "https://launchpad.net/kicad/5.0/5.0.2/+download/kicad-5.0.2.tar.xz",
+                    "sha256": "2f3406e72eb6757789c18bd9204d0c6ddae64b025f4c6fec28037410722ec080"
                 }
             ],
             "buildsystem": "cmake",
@@ -121,7 +121,8 @@
                 "-DKICAD_SCRIPTING=OFF",
                 "-DKICAD_SCRIPTING_MODULES=OFF",
                 "-DKICAD_SCRIPTING_WXPYTHON=OFF",
-                "-DKICAD_SPICE=ON"
+                "-DKICAD_SPICE=ON",
+                "-DKICAD_SCRIPTING_ACTION_MENU=OFF"
             ]
         },
         {
@@ -129,8 +130,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-templates/archive/5.0.0.tar.gz#/kicad-templates-5.0.0.tar.gz",
-                    "sha256": "5259eca6d7b4519258a6cfd7d9e90b5eeeaa6ab6975ad0b12734f7bca1210cb6"
+                    "url": "https://github.com/KiCad/kicad-templates/archive/5.0.2.tar.gz#/kicad-templates-5.0.2.tar.gz",
+                    "sha256": "ca46396cfbc31cbf78f5edbcf5950caccd18fc1486ccb145884e577cac076b76"
                 }
             ],
             "buildsystem": "cmake"
@@ -142,8 +143,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.0.0.tar.gz#/kicad-symbols-5.0.0.tar.gz",
-                    "sha256": "0bf931ffa8da438cf44c2b0a69c3625296e5c9935c40cd6274182cad7fcda825"
+                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.0.2.tar.gz#/kicad-symbols-5.0.2.tar.gz",
+                    "sha256": "eeb58a46ab9423ae2b66307f50cc0c897a1a7679d91f423402edb80f0df21cdc"
                 }
             ],
             "buildsystem": "cmake"
@@ -153,8 +154,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.0.0.tar.gz#/kicad-footprints-5.0.0.tar.gz",
-                    "sha256": "26c0231043b66e75d02aa5e5c9b51a07966e3aed8c17df22c255aa379104e2a6"
+                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.0.2.tar.gz#/kicad-footprints-5.0.2.tar.gz",
+                    "sha256": "430c3d58ad85aa87c2514b3243536f73d8690681693d63bc5886ce3b82e2e841"
                 }
             ],
             "buildsystem": "cmake"
@@ -164,8 +165,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.0.0.tar.gz#/kicad-packages3D-5.0.0.tar.gz",
-                    "sha256": "8e9b0dfb886e1ec699474b2438c0e92b2a2148950d015c6af4f85c38ca20d659"
+                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.0.2.tar.gz#/kicad-packages3D-5.0.2.tar.gz",
+                    "sha256": "86e20dfb3a4720082a4dd92d66c7d3581e11f3638c8dc3a832a526ab3fc321fa"
                 }
             ],
             "buildsystem": "cmake"
@@ -175,8 +176,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-i18n/archive/5.0.0.tar.gz#/kicad-i18n-5.0.0.tar.gz",
-                    "sha256": "ed029a7a2fabbb388828a72eed509fed948895e2d8f848ebf91e5251de60ce4a"
+                    "url": "https://github.com/KiCad/kicad-i18n/archive/5.0.2.tar.gz#/kicad-i18n-5.0.2.tar.gz",
+                    "sha256": "cde8939ad031519847f90daa1ad6d87516ab224949e028a5f89a895c7595870a"
                 }
             ],
             "buildsystem": "cmake",
