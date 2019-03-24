@@ -1,8 +1,8 @@
 {
     "app-id": "org.kicad_pcb.KiCad",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "18.08",
+    "sdk": "org.freedesktop.Sdk",
     "command": "kicad",
     "appdata-license": "GPL-3.0+ and BSD and MIT and wxWidgets",
     "rename-desktop-file": "kicad.desktop",
@@ -25,12 +25,11 @@
         {
             "name": "wxWidgets",
             "rm-configure": true,
-            "config-opts": [ "--disable-silent-rules" ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.3/wxWidgets-3.0.3.tar.bz2",
-                    "sha256": "08c8033f48ec1b23520f036cde37b5ae925a6a65f137ded665633ca159b9307b"
+                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2",
+                    "sha256": "4cb8d23d70f9261debf7d6cfeca667fc0a7d2b6565adb8f1c484f9b674f1f27a"
                 },
                 {
                     "type": "script",
@@ -50,7 +49,7 @@
                     "sha256": "c553d6a7bf52f790abc3b6bb7a1e91a65947e92a426bb1a88a11960c31f0966c"
                 }
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DOCE_INSTALL_PREFIX=/app"
             ]
@@ -60,11 +59,11 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/g-truc/glm/releases/download/0.9.9.0/glm-0.9.9.0.zip",
-                    "sha256": "e1c707407c43589e8eeb8b69b902f1a34aaaa59bda1ca144181c2d2d6e531246"
+                    "url": "https://github.com/g-truc/glm/releases/download/0.9.9.4/glm-0.9.9.4.zip",
+                    "sha256": "972b8c319ff1b96eeac19c63563176f138527ebf6fa5110b8eac5fe23f5e7d9f"
                 }
             ],
-            "buildsystem": "cmake"
+            "buildsystem": "cmake-ninja"
         },
 
 
@@ -79,8 +78,8 @@
             ],
             "buildsystem": "simple",
             "build-commands": [
-                "./bootstrap.sh --prefix=/app",
-                "./b2 install --with-context --with-date_time --with-filesystem --with-iostreams --with-locale --with-program_options --with-regex --with-system --with-thread --with-test --prefix=/app"
+                "./bootstrap.sh --prefix=/app --with-libraries=context,date_time,filesystem,iostreams,locale,program_options,regex,system,thread,test",
+                "./b2 -j $FLATPAK_BUILDER_N_JOBS install"
             ]
         },
         {
@@ -90,7 +89,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/28/ngspice-28.tar.gz",
+                    "url": "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/28/ngspice-28.tar.gz",
                     "sha256": "94804fa78c8db2f90f088902e8c27f7b732a66767a58c70f37612bff5a16df66"
                 },
                 {
@@ -107,11 +106,11 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://launchpad.net/kicad/5.0/5.0.2/+download/kicad-5.0.2.tar.xz",
-                    "sha256": "2f3406e72eb6757789c18bd9204d0c6ddae64b025f4c6fec28037410722ec080"
+                    "url": "https://launchpad.net/kicad/5.0/5.1.0/+download/kicad-5.1.0.tar.xz",
+                    "sha256": "7a9e018ee7372f144d9eb2b78bc1e7b5dfa92f6e293f4c1cff75781e8e9a0cbd"
                 }
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBOOST_ROOT=/app",
                 "-DGLEW_GLEW_LIBRARY=/app/lib/libGLEW.so",
@@ -130,11 +129,11 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-templates/archive/5.0.2.tar.gz#/kicad-templates-5.0.2.tar.gz",
-                    "sha256": "ca46396cfbc31cbf78f5edbcf5950caccd18fc1486ccb145884e577cac076b76"
+                    "url": "https://github.com/KiCad/kicad-templates/archive/5.1.0.tar.gz",
+                    "sha256": "36c4ac1ea78333cd92dc82b28f57066a9888801dc7d803d822e22b5b2a924516"
                 }
             ],
-            "buildsystem": "cmake"
+            "buildsystem": "cmake-ninja"
         },
 
 
@@ -143,44 +142,44 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.0.2.tar.gz#/kicad-symbols-5.0.2.tar.gz",
-                    "sha256": "eeb58a46ab9423ae2b66307f50cc0c897a1a7679d91f423402edb80f0df21cdc"
+                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.1.0.tar.gz",
+                    "sha256": "7ca872eac9fb4117b50bcbbade59c96bd4ebad4d765baac1b95e46d13c25cb71"
                 }
             ],
-            "buildsystem": "cmake"
+            "buildsystem": "cmake-ninja"
         },
         {
             "name": "kicad-footprints",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.0.2.tar.gz#/kicad-footprints-5.0.2.tar.gz",
-                    "sha256": "430c3d58ad85aa87c2514b3243536f73d8690681693d63bc5886ce3b82e2e841"
+                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.0.tar.gz",
+                    "sha256": "965cb3902df557a32ecf4101c37af3e43291f2485f42a23392797da837523e23"
                 }
             ],
-            "buildsystem": "cmake"
+            "buildsystem": "cmake-ninja"
         },
         {
             "name": "kicad-packages3D",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.0.2.tar.gz#/kicad-packages3D-5.0.2.tar.gz",
-                    "sha256": "86e20dfb3a4720082a4dd92d66c7d3581e11f3638c8dc3a832a526ab3fc321fa"
+                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.1.0.tar.gz",
+                    "sha256": "5ea2a0eb8cbe73bf069c96b8c823ef2af4c430e87287c7052aa32f24a9d2c7e6"
                 }
             ],
-            "buildsystem": "cmake"
+            "buildsystem": "cmake-ninja"
         },
         {
             "name": "kicad-i18n",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-i18n/archive/5.0.2.tar.gz#/kicad-i18n-5.0.2.tar.gz",
-                    "sha256": "cde8939ad031519847f90daa1ad6d87516ab224949e028a5f89a895c7595870a"
+                    "url": "https://github.com/KiCad/kicad-i18n/archive/5.1.0.tar.gz",
+                    "sha256": "bb022b905c52e9be87e5ef52020194001ddf7a89d773b202f2b940a6e86392d7"
                 }
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": [
                 "-DKICAD_I18N_UNIX_STRICT_PATH=ON"
