@@ -4,7 +4,6 @@
     "runtime-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "kicad",
-    "appdata-license": "GPL-3.0+ and BSD and MIT and wxWidgets",
     "rename-desktop-file": "kicad.desktop",
     "rename-icon": "kicad",
     "rename-appdata-file": "kicad.appdata.xml",
@@ -108,6 +107,12 @@
                     "type": "archive",
                     "url": "https://launchpad.net/kicad/5.0/5.1.4/+download/kicad-5.1.4.tar.xz",
                     "sha256": "52cca2672e33197ae9ca4c36d73c9a8c580bfeecfe56cd03be8b2a65e06bc0e4"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "sed -i '5i <releases><release version=\"5.1.4\" date=\"2019-08-13\"/></releases><content_rating type=\"oars-1.1\"/>' resources/linux/appdata/kicad.appdata.xml"
+                    ]
                 }
             ],
             "buildsystem": "cmake-ninja",
