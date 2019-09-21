@@ -1,7 +1,7 @@
 {
     "app-id": "org.kicad_pcb.KiCad",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "18.08",
+    "runtime-version": "19.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "kicad",
     "rename-desktop-file": "kicad.desktop",
