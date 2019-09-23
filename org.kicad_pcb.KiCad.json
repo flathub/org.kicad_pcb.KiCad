@@ -58,8 +58,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/g-truc/glm/releases/download/0.9.9.4/glm-0.9.9.4.zip",
-                    "sha256": "972b8c319ff1b96eeac19c63563176f138527ebf6fa5110b8eac5fe23f5e7d9f"
+                    "url": "https://github.com/g-truc/glm/releases/download/0.9.9.6/glm-0.9.9.6.zip",
+                    "sha256": "9db7339c3b8766184419cfe7942d668fecabe9013ccfec8136b39e11718817d0"
                 }
             ],
             "buildsystem": "cmake-ninja"
