@@ -62,7 +62,10 @@
                     "sha256": "9db7339c3b8766184419cfe7942d668fecabe9013ccfec8136b39e11718817d0"
                 }
             ],
-            "buildsystem": "cmake-ninja"
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DGLM_TEST_ENABLE=OFF"
+            ]
         },
 
 
