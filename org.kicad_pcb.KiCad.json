@@ -19,7 +19,7 @@
         "/lib/wx", "/include",
         "*.la", "*.a"],
     "modules": [
-        "shared-modules/glu/glu-9.0.0.json",
+        "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
         {
             "name": "wxWidgets",
@@ -108,8 +108,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://launchpad.net/kicad/5.0/5.1.4/+download/kicad-5.1.4.tar.xz",
-                    "sha256": "52cca2672e33197ae9ca4c36d73c9a8c580bfeecfe56cd03be8b2a65e06bc0e4"
+                    "url": "https://gitlab.com/kicad/code/kicad/-/archive/5.1.4/kicad-5.1.4.tar.gz",
+                    "sha256": "efe86db0c1eb4394ebd65bc133794a4ef60fbef94c83e64c41000b57806ea7ea"
                 },
                 {
                     "type": "shell",
