@@ -183,7 +183,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-i18n/archive/5.1.4.tar.gz",
+                    "url": "https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.4/kicad-i18n-5.1.4.tar.gz",
                     "sha256": "e8f47497dcd7e9448be25e126fc195dc223e1c5b28554ed49e83741f910a1c35"
                 }
             ],
