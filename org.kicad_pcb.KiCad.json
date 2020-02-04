@@ -33,11 +33,12 @@
         {
             "name": "wxWidgets",
             "rm-configure": true,
+            "subdir": "ext/wxWidgets",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2",
-                    "sha256": "4cb8d23d70f9261debf7d6cfeca667fc0a7d2b6565adb8f1c484f9b674f1f27a"
+                    "url": "https://files.pythonhosted.org/packages/b9/8b/31267dd6d026a082faed35ec8d97522c0236f2e083bf15aff64d982215e1/wxPython-4.0.7.post2.tar.gz",
+                    "sha256": "5a229e695b64f9864d30a5315e0c1e4ff5e02effede0a07f16e8d856737a0c4e"
                 },
                 {
                     "type": "script",
@@ -48,6 +49,7 @@
                 }
             ]
         },
+        "python3-wxPython.json",
         {
             "name": "OCE",
             "sources": [
@@ -117,6 +119,17 @@
             ]
         },
         {
+            "name": "swig",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/swig/files/swig/swig-4.0.1/swig-4.0.1.tar.gz",
+                    "sha256": "7a00b4d0d53ad97a14316135e2d702091cd5f193bb58bcfcd8bc59d41e7887a9"
+                }
+            ],
+            "buildsystem": "autotools"
+        },
+        {
             "name": "kicad",
             "sources": [
                 {
@@ -131,16 +144,13 @@
                     ]
                 }
             ],
-            "buildsystem": "cmake-ninja",
+            "buildsystem": "cmake",
             "config-opts": [
                 "-DBOOST_ROOT=/app",
                 "-DGLEW_INCLUDE_DIR=/app/include/GL",
                 "-DOPENGL_glu_LIBRARY=/app/lib/libGLU.so",
-                "-DKICAD_SCRIPTING=OFF",
-                "-DKICAD_SCRIPTING_MODULES=OFF",
-                "-DKICAD_SCRIPTING_WXPYTHON=OFF",
-                "-DKICAD_SPICE=ON",
-                "-DKICAD_SCRIPTING_ACTION_MENU=OFF"
+                "-DKICAD_SCRIPTING_PYTHON3=ON",
+                "-DKICAD_SCRIPTING_WXPYTHON_PHOENIX=ON"
             ]
         },
         {
