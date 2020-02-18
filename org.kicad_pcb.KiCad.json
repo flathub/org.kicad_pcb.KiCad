@@ -19,7 +19,7 @@
         "/lib/wx", "/include",
         "*.la", "*.a"],
     "modules": [
-        "shared-modules/glu/glu-9.0.0.json",
+        "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
         {
             "name": "wxWidgets",
@@ -108,13 +108,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://launchpad.net/kicad/5.0/5.1.4/+download/kicad-5.1.4.tar.xz",
-                    "sha256": "52cca2672e33197ae9ca4c36d73c9a8c580bfeecfe56cd03be8b2a65e06bc0e4"
+                    "url": "https://gitlab.com/kicad/code/kicad/-/archive/5.1.5/kicad-5.1.5.tar.gz",
+                    "sha256": "1add0dce199be35a10fcc1414e8b655df9e051790ff78d6d2d720bc8d646f87d"
                 },
                 {
                     "type": "shell",
                     "commands": [
-                        "sed -i '5i <releases><release version=\"5.1.4\" date=\"2019-08-13\"/></releases><content_rating type=\"oars-1.1\"/>' resources/linux/appdata/kicad.appdata.xml"
+                        "sed -i '5i <releases><release version=\"5.1.5\" date=\"2019-11-27\"/></releases><content_rating type=\"oars-1.1\"/>' resources/linux/appdata/kicad.appdata.xml"
                     ]
                 }
             ],
@@ -137,8 +137,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-templates/archive/5.1.4.tar.gz",
-                    "sha256": "be2fc20ccf646843af4871ad2d4cd79418e895bc70442569f0b1f423c615bdbb"
+                    "url": "https://github.com/KiCad/kicad-templates/archive/5.1.5.tar.gz",
+                    "sha256": "f08f857eee9b88cc89d1579c66046e01d752cf696d468d8ac2465066d379e406"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -150,8 +150,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.1.4.tar.gz",
-                    "sha256": "afa91c22cb2c01a52dfaffc9256085a52a9ee7811f7eef2e9154049de9ed5707"
+                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.1.5.tar.gz",
+                    "sha256": "47abb25a88e8f2d9a623d21476bb7ee5a60f5e68e55dcf388842610f0bad7e06"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -161,8 +161,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.4.tar.gz",
-                    "sha256": "79cb7f15fdfc6510a5260f03c53be341b0ccf152cc3008d3c7a576e926036e37"
+                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.5.tar.gz",
+                    "sha256": "c2bb5a126e49020134b75dc27d2ee4a9cd56cf300bb16c397ac580fd43339f76"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -172,8 +172,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.1.4.tar.gz",
-                    "sha256": "80cc03bca0f78948ed32ed5c5636c692725b85fde859863c02fd5df81f5f4a02"
+                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.1.5.tar.gz",
+                    "sha256": "b1c35e686865faf8a9b08d3843b188e90b4088f0b1e5f3f0393fac833a22a749"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -183,8 +183,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-i18n/archive/5.1.4.tar.gz",
-                    "sha256": "e8f47497dcd7e9448be25e126fc195dc223e1c5b28554ed49e83741f910a1c35"
+                    "url": "https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.5/kicad-i18n-5.1.5.tar.gz",
+                    "sha256": "aec6902def684ffee62bb7d84edc167151d555ab743cc81b10053207b4e842a3"
                 }
             ],
             "buildsystem": "cmake-ninja",
