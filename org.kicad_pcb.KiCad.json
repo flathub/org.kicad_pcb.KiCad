@@ -122,6 +122,12 @@
                     "type": "archive",
                     "url": "https://gitlab.com/kicad/code/kicad/-/archive/5.1.6/kicad-5.1.6.tar.gz",
                     "sha256": "ac1a15e25a7ff0aca4b6224bdb2d3298081b43bedfad79470339d53d5e72beb0"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "sed -i '5s/org\.kicad_pcb\.kicad/org.kicad_pcb.KiCad/' resources/linux/appdata/kicad.appdata.xml.in"
+                    ]
                 }
             ],
             "buildsystem": "cmake-ninja",
