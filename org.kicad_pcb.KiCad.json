@@ -8,16 +8,24 @@
     "rename-icon": "kicad",
     "rename-appdata-file": "kicad.appdata.xml",
     "finish-args": [
-        "--share=network",
-        "--socket=x11",
         "--device=dri",
+        "--filesystem=home",
         "--share=ipc",
-        "--filesystem=home"
+        "--share=network",
+        "--socket=x11"
     ],
-    "cleanup": ["/share/doc",
-        "/share/aclocal", "/share/bakefile",
-        "/lib/wx", "/include",
-        "*.la", "*.a"],
+    "cleanup": [
+        "/include",
+        "/lib/oce-0.18",
+        "/lib/pkgconfig",
+        "/lib/wx",
+        "/lib64",
+        "/share/aclocal",
+        "/share/bakefile",
+        "/share/doc",
+        "*.la",
+        "*.a"
+    ],
     "modules": [
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
@@ -67,8 +75,6 @@
                 "-DGLM_TEST_ENABLE=OFF"
             ]
         },
-
-
         {
             "name": "boost",
             "sources": [
@@ -87,7 +93,13 @@
         {
             "name": "ngspice",
             "rm-configure": true,
-            "config-opts": [ "--disable-silent-rules", "--with-ngshared", "--enable-xspice", "--enable-cider", "--enable-openmp" ],
+            "config-opts": [
+                "--disable-silent-rules",
+                "--enable-xspice",
+                "--enable-cider",
+                "--enable-openmp",
+                "--with-ngshared"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -108,22 +120,20 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/kicad/code/kicad/-/archive/5.1.5/kicad-5.1.5.tar.gz",
-                    "sha256": "1add0dce199be35a10fcc1414e8b655df9e051790ff78d6d2d720bc8d646f87d"
+                    "url": "https://gitlab.com/kicad/code/kicad/-/archive/5.1.6/kicad-5.1.6.tar.gz",
+                    "sha256": "ac1a15e25a7ff0aca4b6224bdb2d3298081b43bedfad79470339d53d5e72beb0"
                 },
                 {
                     "type": "shell",
                     "commands": [
-                        "sed -i '5i <releases><release version=\"5.1.5\" date=\"2019-11-27\"/></releases><content_rating type=\"oars-1.1\"/>' resources/linux/appdata/kicad.appdata.xml"
+                        "sed -i '5s/org\.kicad_pcb\.kicad/org.kicad_pcb.KiCad/' resources/linux/appdata/kicad.appdata.xml.in"
                     ]
                 }
             ],
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBOOST_ROOT=/app",
-                "-DGLEW_GLEW_LIBRARY=/app/lib/libGLEW.so",
                 "-DGLEW_INCLUDE_DIR=/app/include/GL",
-                "-DKICAD_SKIP_BOOST=ON",
                 "-DOPENGL_glu_LIBRARY=/app/lib/libGLU.so",
                 "-DKICAD_SCRIPTING=OFF",
                 "-DKICAD_SCRIPTING_MODULES=OFF",
@@ -137,21 +147,19 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-templates/archive/5.1.5.tar.gz",
-                    "sha256": "f08f857eee9b88cc89d1579c66046e01d752cf696d468d8ac2465066d379e406"
+                    "url": "https://github.com/KiCad/kicad-templates/archive/5.1.6.tar.gz",
+                    "sha256": "f970e889ed3c909691f8a2464831e117e0002cfb0d3b3558bf16f42fa04c55dc"
                 }
             ],
             "buildsystem": "cmake-ninja"
         },
-
-
         {
             "name": "kicad-symbols",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.1.5.tar.gz",
-                    "sha256": "47abb25a88e8f2d9a623d21476bb7ee5a60f5e68e55dcf388842610f0bad7e06"
+                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.1.6.tar.gz",
+                    "sha256": "c4cd711698aaa681693a733f80c371e140c2cd5809e3ee569320e843aac3325e"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -161,8 +169,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.5.tar.gz",
-                    "sha256": "c2bb5a126e49020134b75dc27d2ee4a9cd56cf300bb16c397ac580fd43339f76"
+                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.6.tar.gz",
+                    "sha256": "a6585cac71aa100375b6e969cb43388749e5d77a54674569f3627aaaf38c6a2c"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -172,8 +180,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.1.5.tar.gz",
-                    "sha256": "b1c35e686865faf8a9b08d3843b188e90b4088f0b1e5f3f0393fac833a22a749"
+                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.1.6.tar.gz",
+                    "sha256": "c455712a9eacdbbabf3367977911152f2e616bf8f622962f0fd4f3c6ddd00038"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -183,8 +191,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.5/kicad-i18n-5.1.5.tar.gz",
-                    "sha256": "aec6902def684ffee62bb7d84edc167151d555ab743cc81b10053207b4e842a3"
+                    "url": "https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.6/kicad-i18n-5.1.6.tar.gz",
+                    "sha256": "bca4c86391a5e33cd2a41372fceb2803951ab2832b9e09a95161390d42f1f0f5"
                 }
             ],
             "buildsystem": "cmake-ninja",
