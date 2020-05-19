@@ -9,6 +9,7 @@
     "rename-appdata-file": "kicad.appdata.xml",
     "finish-args": [
         "--device=dri",
+        "--env=LD_LIBRARY_PATH=/app/lib",
         "--filesystem=home",
         "--share=ipc",
         "--share=network",
@@ -103,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/28/ngspice-28.tar.gz",
-                    "sha256": "94804fa78c8db2f90f088902e8c27f7b732a66767a58c70f37612bff5a16df66"
+                    "url": "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/31/ngspice-31.tar.gz",
+                    "sha256": "845f3b0c962e47ded051dfbc134c3c1e4ac925c9f0ce1cb3df64eb9b9da5c282"
                 },
                 {
                     "type": "script",
