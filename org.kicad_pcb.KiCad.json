@@ -138,13 +138,17 @@
                     "sha256": "ac1a15e25a7ff0aca4b6224bdb2d3298081b43bedfad79470339d53d5e72beb0"
                 },
                 {
+                    "type": "patch",
+                    "path": "fix-cmake-ninja-build.patch"
+                },
+                {
                     "type": "shell",
                     "commands": [
                         "sed -i '5s/org\.kicad_pcb\.kicad/org.kicad_pcb.KiCad/' resources/linux/appdata/kicad.appdata.xml.in"
                     ]
                 }
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBOOST_ROOT=/app",
                 "-DGLEW_INCLUDE_DIR=/app/include/GL",
