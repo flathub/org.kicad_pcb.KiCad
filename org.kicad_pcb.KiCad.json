@@ -23,7 +23,6 @@
         "/lib64",
         "/share/aclocal",
         "/share/bakefile",
-        "/share/doc",
         "*.la",
         "*.a"
     ],
@@ -214,6 +213,20 @@
             "builddir": true,
             "config-opts": [
                 "-DKICAD_I18N_UNIX_STRICT_PATH=ON"
+            ]
+        },
+        {
+            "name": "kicad-doc",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://kicad-downloads.s3.cern.ch/docs/kicad-doc-5.1.6.tar.gz",
+                    "sha256": "3abb7f96269d146023463edb0a5eaaeb73ff4f7b1b6948a5d97deeaf625aecd0"
+                }
+            ],
+            "buildsystem": "simple",
+            "build-commands": [
+                "find . -type f -exec install -Dm644 \"{}\" \"${FLATPAK_DEST}/{}\" \\;"
             ]
         }
     ]
