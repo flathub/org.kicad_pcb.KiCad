@@ -143,7 +143,7 @@
                 {
                     "type": "shell",
                     "commands": [
-                        "sed -i '5s/org\.kicad_pcb\.kicad/org.kicad_pcb.KiCad/' resources/linux/appdata/kicad.appdata.xml.in"
+                        "sed -i '5s/org\.kicad_pcb\.kicad/org.kicad_pcb.KiCad/;96i<kudos><kudo>UserDocs</kudo></kudos>' resources/linux/appdata/kicad.appdata.xml.in"
                     ]
                 }
             ],
