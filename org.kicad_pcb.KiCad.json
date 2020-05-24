@@ -15,6 +15,15 @@
         "--share=network",
         "--socket=x11"
     ],
+    "add-extensions": {
+        "org.kicad_pcb.KiCad.Library": {
+            "version": "5.1",
+            "directory": "library-extensions",
+            "subdirectories": true,
+            "no-autodownload": true,
+            "autodelete": true
+        }
+    },
     "cleanup": [
         "/include",
         "/lib/oce-0.18",
@@ -154,6 +163,9 @@
                 "-DOPENGL_glu_LIBRARY=/app/lib/libGLU.so",
                 "-DKICAD_SCRIPTING_PYTHON3=ON",
                 "-DKICAD_SCRIPTING_WXPYTHON_PHOENIX=ON"
+            ],
+            "post-install": [
+                "install -d /app/library-extensions"
             ]
         },
         {
