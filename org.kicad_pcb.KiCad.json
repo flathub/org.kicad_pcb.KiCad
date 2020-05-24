@@ -10,6 +10,7 @@
     "finish-args": [
         "--device=dri",
         "--env=LD_LIBRARY_PATH=/app/lib",
+        "--env=KISYS3DMOD=/app/library-extensions/Packages3D/share/kicad/modules/packages3d",
         "--filesystem=home",
         "--share=ipc",
         "--share=network",
@@ -197,17 +198,6 @@
                     "type": "archive",
                     "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.6.tar.gz",
                     "sha256": "a6585cac71aa100375b6e969cb43388749e5d77a54674569f3627aaaf38c6a2c"
-                }
-            ],
-            "buildsystem": "cmake-ninja"
-        },
-        {
-            "name": "kicad-packages3D",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-packages3D/archive/5.1.6.tar.gz",
-                    "sha256": "c455712a9eacdbbabf3367977911152f2e616bf8f622962f0fd4f3c6ddd00038"
                 }
             ],
             "buildsystem": "cmake-ninja"
