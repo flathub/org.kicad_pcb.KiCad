@@ -162,6 +162,7 @@
                 "-DBOOST_ROOT=/app",
                 "-DGLEW_INCLUDE_DIR=/app/include/GL",
                 "-DOPENGL_glu_LIBRARY=/app/lib/libGLU.so",
+                "-DKICAD_BUILD_QA_TESTS=OFF",
                 "-DKICAD_SCRIPTING_PYTHON3=ON",
                 "-DKICAD_SCRIPTING_WXPYTHON_PHOENIX=ON"
             ],
