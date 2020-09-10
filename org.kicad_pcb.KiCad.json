@@ -179,10 +179,6 @@
                 },
                 {
                     "type": "patch",
-                    "path": "fix-building-against-boost-1.73.patch"
-                },
-                {
-                    "type": "patch",
                     "path": "fix-rectifier-demo-for-ngspice-32.patch"
                 },
                 {
