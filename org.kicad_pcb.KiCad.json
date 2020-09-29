@@ -1,7 +1,7 @@
 {
     "app-id": "org.kicad_pcb.KiCad",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "19.08",
+    "runtime-version": "20.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "kicad",
     "rename-desktop-file": "kicad.desktop",
@@ -57,8 +57,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://sourceforge.net/projects/boost/files/boost/1.73.0/boost_1_73_0.tar.bz2",
-                    "sha256": "4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402"
+                    "url": "http://sourceforge.net/projects/boost/files/boost/1.74.0/boost_1_74_0.tar.bz2",
+                    "sha256": "83bfc1507731a0906e387fc28b7ef5417d591429e51e788417fe9ff025e116b1"
                 }
             ],
             "buildsystem": "simple",
@@ -170,16 +170,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/kicad/code/kicad/-/archive/5.1.6/kicad-5.1.6.tar.gz",
-                    "sha256": "ac1a15e25a7ff0aca4b6224bdb2d3298081b43bedfad79470339d53d5e72beb0"
+                    "url": "https://gitlab.com/kicad/code/kicad/-/archive/5.1.7/kicad-5.1.7.tar.gz",
+                    "sha256": "96ad30aa289ed6f77ffcd8283d0877b700139187e5f1957acad8ad4dbad472bc"
                 },
                 {
                     "type": "patch",
                     "path": "fix-cmake-ninja-build.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "fix-building-against-boost-1.73.patch"
                 },
                 {
                     "type": "patch",
@@ -212,8 +208,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.6/kicad-i18n-5.1.6.tar.gz",
-                    "sha256": "bca4c86391a5e33cd2a41372fceb2803951ab2832b9e09a95161390d42f1f0f5"
+                    "url": "https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.7/kicad-i18n-5.1.7.tar.gz",
+                    "sha256": "be72fc4488d8b614b2b7997669641d0adeabe689083253b5c6bfb99853171542"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -227,8 +223,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://kicad-downloads.s3.cern.ch/docs/kicad-doc-5.1.6.tar.gz",
-                    "sha256": "3abb7f96269d146023463edb0a5eaaeb73ff4f7b1b6948a5d97deeaf625aecd0"
+                    "url": "https://kicad-downloads.s3.cern.ch/docs/kicad-doc-5.1.7.tar.gz",
+                    "sha256": "552156c0dbf05ac3767b49d294f2f99c4963621e06577042d311ac470490eb21"
                 }
             ],
             "buildsystem": "simple",
@@ -241,8 +237,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-templates/archive/5.1.6.tar.gz",
-                    "sha256": "f970e889ed3c909691f8a2464831e117e0002cfb0d3b3558bf16f42fa04c55dc"
+                    "url": "https://github.com/KiCad/kicad-templates/archive/5.1.7.tar.gz",
+                    "sha256": "0454a08872e39c7f5f038f4447606ec05d7e327684a8361ccb71e7e3d497bbb2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -252,8 +248,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.1.6.tar.gz",
-                    "sha256": "c4cd711698aaa681693a733f80c371e140c2cd5809e3ee569320e843aac3325e"
+                    "url": "https://github.com/KiCad/kicad-symbols/archive/5.1.7.tar.gz",
+                    "sha256": "ab8fe5a65a7c1a99d9b85f82c56cc7b2dbe77eb37e28945481dcddad7378b425"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -263,8 +259,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.6.tar.gz",
-                    "sha256": "a6585cac71aa100375b6e969cb43388749e5d77a54674569f3627aaaf38c6a2c"
+                    "url": "https://github.com/KiCad/kicad-footprints/archive/5.1.7.tar.gz",
+                    "sha256": "2720e009285fbafa44216417c71d438833398ccb4a23d9c6cce86170983817fa"
                 }
             ],
             "buildsystem": "cmake-ninja"
