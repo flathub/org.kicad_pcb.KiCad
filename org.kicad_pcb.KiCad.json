@@ -10,7 +10,7 @@
     "finish-args": [
         "--device=dri",
         "--env=LD_LIBRARY_PATH=/app/lib",
-        "--env=KISYS3DMOD=/app/library-extensions/Packages3D/share/kicad/modules/packages3d",
+        "--env=KISYS3DMOD=/app/library-extensions/Packages3D/extra",
         "--filesystem=home",
         "--share=ipc",
         "--share=network",
