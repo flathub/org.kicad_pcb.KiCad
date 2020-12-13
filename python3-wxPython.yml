@@ -17,8 +17,8 @@ modules:
   - pip3 install --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "wheel"
   sources:
   - type: file
-    url: https://files.pythonhosted.org/packages/a7/00/3df031b3ecd5444d572141321537080b40c1c25e1caa3d86cdd12e5e919c/wheel-0.35.1-py2.py3-none-any.whl
-    sha256: 497add53525d16c173c2c1c733b8f655510e909ea78cc0e29d374243544b77a2
+    url: https://files.pythonhosted.org/packages/65/63/39d04c74222770ed1589c0eaba06c05891801219272420b40311cd60c880/wheel-0.36.2-py2.py3-none-any.whl
+    sha256: 78b5b185f0e5763c26ca1e324373aadd49182ca90e825f7853f4b2509215dc0e
 
 - name: python3-wxPython
   buildsystem: simple
@@ -29,14 +29,14 @@ modules:
       WXPYTHON_BUILD_ARGS: --use_syswx
   sources:
   - type: file
-    url: https://files.pythonhosted.org/packages/bf/e8/15aea783ea72e2d4e51e3ec365e8dc4a1a32c9e5eb3a6d695b0d58e67cdd/numpy-1.19.2.zip
-    sha256: 0d310730e1e793527065ad7dde736197b705d0e4c9999775f212b03c44a8484c
+    url: https://files.pythonhosted.org/packages/c5/63/a48648ebc57711348420670bb074998f79828291f68aebfff1642be212ec/numpy-1.19.4.zip
+    sha256: 141ec3a3300ab89c7f2b0775289954d193cc8edb621ea05f99db9cb181530512
   - type: file
     url: https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
     sha256: 8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced
   - type: file
-    url: https://files.pythonhosted.org/packages/3e/02/b09732ca4b14405ff159c470a612979acfc6e8645dc32f83ea0129709f7a/Pillow-7.2.0.tar.gz
-    sha256: 97f9e7953a77d5a70f49b9a48da7776dc51e9b738151b22dacf101641594a626
+    url: https://files.pythonhosted.org/packages/2b/06/93bf1626ef36815010e971a5ce90f49919d84ab5d2fa310329f843a74bc1/Pillow-8.0.1.tar.gz
+    sha256: 11c5c6e9b02c9dac08af04f093eb5a2f84857df70a7d4a6a6ad461aca803fb9e
   - type: file
     url: https://files.pythonhosted.org/packages/b9/8b/31267dd6d026a082faed35ec8d97522c0236f2e083bf15aff64d982215e1/wxPython-4.0.7.post2.tar.gz
     sha256: 5a229e695b64f9864d30a5315e0c1e4ff5e02effede0a07f16e8d856737a0c4e
