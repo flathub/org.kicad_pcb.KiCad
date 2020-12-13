@@ -104,8 +104,8 @@ modules:
   - -DINSTALL_TEST_CASES=OFF
   sources:
   - type: archive
-    url: https://github.com/tpaviot/oce/releases/download/official-upstream-packages/opencascade-7.4.0.tgz
-    sha256: 1eace85115ea178f268e9d803ced994b66b72455b5484074b6ad7f643261f0a0
+    url: https://github.com/tpaviot/oce/releases/download/official-upstream-packages/opencascade-7.5.0.tgz
+    sha256: d82d253aa6f43ce49111e84e04286dab4445eecba8efb5190973244b0c7fd211
 
 - name: ngspice
   config-opts:
