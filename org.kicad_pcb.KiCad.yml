@@ -8,7 +8,6 @@ rename-desktop-file: kicad.desktop
 rename-icon: kicad
 finish-args:
 - --device=dri
-- --env=LD_LIBRARY_PATH=/app/lib
 - --env=KISYS3DMOD=/app/library-extensions/Packages3D/extra
 - --filesystem=home
 - --share=ipc
@@ -119,8 +118,11 @@ modules:
   - type: archive
     url: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/33/ngspice-33.tar.gz
     sha256: b99db66cc1c57c44e9af1ef6ccb1dcbc8ae1df3e35acf570af578f606f8541f1
+  - type: file
+    path: ld.so.conf
   - type: script
     commands:
+    - install -Dm644 ld.so.conf -t /app/etc/
     - cp -p /usr/share/automake-*/config.{sub,guess} .
     - autoconf -f -B build/autoconf_prepend-include
 
