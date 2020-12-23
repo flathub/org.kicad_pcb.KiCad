@@ -14,6 +14,7 @@ finish-args:
 - --share=ipc
 - --share=network
 - --socket=x11
+
 add-extensions:
   org.kicad_pcb.KiCad.Library:
     version: '5.1'
@@ -21,6 +22,7 @@ add-extensions:
     autodelete: true
     no-autodownload: true
     subdirectories: true
+
 cleanup:
 - /include
 - /lib/pkgconfig
@@ -139,10 +141,8 @@ modules:
   - install -d /app/library-extensions
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/code/kicad/-/archive/5.1.8/kicad-5.1.8.tar.gz
-    sha256: bf24f8ef427b4a989479b8e4af0b8ae5c54766755f12748e2e88a922c5344ca4
-  - type: patch
-    path: fix-cmake-ninja-build.patch
+    url: https://gitlab.com/kicad/code/kicad/-/archive/5.1.9/kicad-5.1.9.tar.gz
+    sha256: 841be864b9dc5c761193c3ee9cbdbed6729952d7b38451aa8e1977bdfdb6081b
   - type: patch
     path: fix-rectifier-demo-for-ngspice-32.patch
   - type: shell
@@ -156,8 +156,8 @@ modules:
   - -DKICAD_I18N_UNIX_STRICT_PATH=ON
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.8/kicad-i18n-5.1.8.tar.gz
-    sha256: 1c4138f4663e072ac6c742d73ccc0984b2de7be202b37155aacbd4f17e645317
+    url: https://gitlab.com/kicad/code/kicad-i18n/-/archive/5.1.9/kicad-i18n-5.1.9.tar.gz
+    sha256: f2cadcae1400bf483668ceccd190dff3d9dfd098307c146d273ed0bb01f4882f
 
 - name: kicad-doc
   build-commands:
@@ -165,26 +165,26 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://kicad-downloads.s3.cern.ch/docs/kicad-doc-5.1.8.tar.gz
-    sha256: f2d96bae9bb44c089b155ee61bb589d51373647cdfdf28b5f931756e369bdf14
+    url: https://kicad-downloads.s3.cern.ch/docs/kicad-doc-5.1.9.tar.gz
+    sha256: 61571f260bba67e26b9f7456ad6eb5da7c3b406412f506e7857d0ca70ca66393
 
 - name: kicad-templates
   buildsystem: cmake-ninja
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-templates/-/archive/5.1.8/kicad-templates-5.1.8.tar.gz
-    sha256: 1afc8196f47d053937c2db9ee7f09b0d812e1ba93e57a0610ab1ced21c9134ca
+    url: https://gitlab.com/kicad/libraries/kicad-templates/-/archive/5.1.9/kicad-templates-5.1.9.tar.gz
+    sha256: 0c1bf3d2e6d8d1056a5da6c1f7a173551c154b4bdaddb86b6a34155b18e65da6
 
 - name: kicad-symbols
   buildsystem: cmake-ninja
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/5.1.8/kicad-symbols-5.1.8.tar.gz
-    sha256: a5ca226afbabdd1822c4a18e63a2943cd2913df11e8e50530768fbdd7997ba54
+    url: https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/5.1.9/kicad-symbols-5.1.9.tar.gz
+    sha256: cdb033cc755cc66a087b44fff1d2b77bf2dd44311a02c81a516b8ca1fbd242a7
 
 - name: kicad-footprints
   buildsystem: cmake-ninja
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/5.1.8/kicad-footprints-5.1.8.tar.gz
-    sha256: 31c3676d71139259f1cc67b3a0254ec8a8659d35f2c51a273f5de542c651a819
+    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/5.1.9/kicad-footprints-5.1.9.tar.gz
+    sha256: 415e014364d1c12584f115a4adfeec1b71e41e2cd7f4ae543237ee71b8ef41bd
