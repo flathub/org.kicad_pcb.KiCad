@@ -22,6 +22,7 @@ add-extensions:
     autodelete: true
     no-autodownload: true
     subdirectories: true
+    merge-dirs: extra/template
 
 cleanup:
 - /include
