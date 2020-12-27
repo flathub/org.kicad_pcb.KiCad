@@ -2,24 +2,6 @@ name: python3-wxPython
 buildsystem: simple
 build-commands: []
 modules:
-- name: python3-Cython
-  buildsystem: simple
-  build-commands:
-  - pip3 install --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "Cython"
-  sources:
-  - type: file
-    url: https://files.pythonhosted.org/packages/6c/9f/f501ba9d178aeb1f5bf7da1ad5619b207c90ac235d9859961c11829d0160/Cython-0.29.21.tar.gz
-    sha256: e57acb89bd55943c8d8bf813763d20b9099cc7165c0f16b707631a7654be9cad
-
-- name: python3-wheel
-  buildsystem: simple
-  build-commands:
-  - pip3 install --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "wheel"
-  sources:
-  - type: file
-    url: https://files.pythonhosted.org/packages/65/63/39d04c74222770ed1589c0eaba06c05891801219272420b40311cd60c880/wheel-0.36.2-py2.py3-none-any.whl
-    sha256: 78b5b185f0e5763c26ca1e324373aadd49182ca90e825f7853f4b2509215dc0e
-
 - name: python3-wxPython
   buildsystem: simple
   build-commands:
@@ -31,9 +13,6 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/c5/63/a48648ebc57711348420670bb074998f79828291f68aebfff1642be212ec/numpy-1.19.4.zip
     sha256: 141ec3a3300ab89c7f2b0775289954d193cc8edb621ea05f99db9cb181530512
-  - type: file
-    url: https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
-    sha256: 8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced
   - type: file
     url: https://files.pythonhosted.org/packages/2b/06/93bf1626ef36815010e971a5ce90f49919d84ab5d2fa310329f843a74bc1/Pillow-8.0.1.tar.gz
     sha256: 11c5c6e9b02c9dac08af04f093eb5a2f84857df70a7d4a6a6ad461aca803fb9e
