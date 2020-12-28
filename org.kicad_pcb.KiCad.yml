@@ -26,6 +26,7 @@ add-extensions:
 
 cleanup:
 - /include
+- /lib/cmake
 - /lib/pkgconfig
 - /lib/wx
 - /lib64
@@ -59,6 +60,8 @@ modules:
 
 - name: wxWidgets
   rm-configure: true
+  cleanup:
+  - /bin
   subdir: ext/wxWidgets
   sources:
   - type: archive
@@ -73,12 +76,17 @@ modules:
 
 - name: swig
   buildsystem: autotools
+  cleanup:
+  - /bin
+  - /share
   sources:
   - type: archive
     url: https://sourceforge.net/projects/swig/files/swig/swig-4.0.2/swig-4.0.2.tar.gz
     sha256: d53be9730d8d58a16bf0cbd1f8ac0c0c3e1090573168bfa151b01eb47fa906fc
 
 - name: libXmu
+  cleanup:
+  - /share/doc
   sources:
   - type: archive
     url: https://www.x.org/archive//individual/lib/libXmu-1.1.3.tar.gz
@@ -88,6 +96,7 @@ modules:
   buildsystem: cmake-ninja
   cleanup:
   - /bin
+  - /share/doc
   config-opts:
   - -DCMAKE_BUILD_TYPE=Release
   - -DBUILD_LIBRARY_TYPE=Shared
@@ -111,6 +120,9 @@ modules:
     sha256: d82d253aa6f43ce49111e84e04286dab4445eecba8efb5190973244b0c7fd211
 
 - name: ngspice
+  cleanup:
+  - /bin
+  - /share/man
   config-opts:
   - --disable-silent-rules
   - --enable-xspice
