@@ -158,6 +158,8 @@ modules:
     sha256: 841be864b9dc5c761193c3ee9cbdbed6729952d7b38451aa8e1977bdfdb6081b
   - type: patch
     path: fix-rectifier-demo-for-ngspice-32.patch
+  - type: patch
+    path: fix-screenshot-sizes-in-kicad.appdata.xml.in.patch
   - type: shell
     commands:
     - sed -i '5s/org\.kicad_pcb\.kicad/org.kicad_pcb.KiCad/;96i<kudos><kudo>UserDocs</kudo></kudos>' resources/linux/appdata/kicad.appdata.xml.in

@@ -1,0 +1,43 @@
+From 42cd6ca4ca28f24c6e1532ef746ad844d03930dc Mon Sep 17 00:00:00 2001
+From: Johannes Maibaum <jmaibaum@gmail.com>
+Date: Wed, 13 Jan 2021 18:14:33 +0100
+Subject: [PATCH] Fix screenshot sizes in kicad.appdata.xml.in
+
+---
+ resources/linux/appdata/kicad.appdata.xml.in | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/resources/linux/appdata/kicad.appdata.xml.in b/resources/linux/appdata/kicad.appdata.xml.in
+index 6abd91b241..f50c4183c3 100644
+--- a/resources/linux/appdata/kicad.appdata.xml.in
++++ b/resources/linux/appdata/kicad.appdata.xml.in
+@@ -67,22 +67,22 @@
+ 
+   <screenshots>
+     <screenshot type="default">
+-      <image width="1024" height="576">https://kicad-pcb.org/img/screenshots/appstream/kicad.png</image>
++      <image width="1290" height="825">https://kicad-pcb.org/img/screenshots/appstream/kicad.png</image>
+     </screenshot>
+ 
+     <screenshot>
+       <caption>Eeschema Schematic Editor</caption>
+-      <image width="1024" height="576">https://kicad-pcb.org/img/screenshots/appstream/eeschema.png</image>
++      <image width="1290" height="825">https://kicad-pcb.org/img/screenshots/appstream/eeschema.png</image>
+     </screenshot>
+ 
+     <screenshot>
+       <caption>PcbNew PCB Layout</caption>
+-      <image width="1024" height="576">https://kicad-pcb.org/img/screenshots/appstream/pcbnew.png</image>
++      <image width="1290" height="825">https://kicad-pcb.org/img/screenshots/appstream/pcbnew.png</image>
+     </screenshot>
+ 
+     <screenshot>
+       <caption>PcbNew 3D Viewer</caption>
+-      <image width="1024" height="576">https://kicad-pcb.org/img/screenshots/appstream/3dviewer.png</image>
++      <image width="1290" height="825">https://kicad-pcb.org/img/screenshots/appstream/3dviewer.png</image>
+     </screenshot>
+   </screenshots>
+ 
+-- 
+2.29.2
+
